@@ -1,0 +1,9 @@
+class Solution:
+    def mySqrt(self, x: int) -> int:
+        mid = (x//2)+1
+        i = 1
+        if x<2:
+            return x
+        while i*i<=x:
+            i+=1
+        return i-1
