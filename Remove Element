@@ -1,0 +1,13 @@
+class Solution:
+    def removeElement(self, nums: List[int], val: int) -> int:
+        c=nums.count(val)
+        k=0
+        for i,num in enumerate(nums):
+            if num!=val:
+                nums[k]=num
+                k=k+1
+        p=0
+        while p<c:
+            nums.pop()
+            p=p+1
+        
