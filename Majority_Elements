@@ -1,0 +1,10 @@
+class Solution:
+    def majorityElement(self, nums: List[int]) -> int:
+        k = {}
+        for i in nums:
+            if i in k:
+                k[i] += 1
+            else:
+                k[i] = 1
+        return max(k,key = k.get)
+```
