@@ -1,0 +1,19 @@
+class Solution:
+    def threeSum(self, nums: List[int]) -> List[List[int]]:
+        lst = []
+        count = 0
+        for i in range(len(nums)):
+            for j in range(i+1,len(nums)):
+                for k in range(j+1,len(nums)):
+                    if nums[i] + nums[j] + nums[k] == 0:
+                        l1 = sorted([nums[i],nums[j],nums[k]])
+                        if l1 not in lst:
+                            lst.append(l1)
+                        # count += 1
+                    # print(i,j,k)
+        # print(count)
+        if count == 1:
+            return lst
+        else:
+            # lst.pop()
+            return lst
