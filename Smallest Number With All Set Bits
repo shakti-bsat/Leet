@@ -1,0 +1,17 @@
+class Solution:
+    def smallestNumber(self, n: int) -> int:
+        b = binary(n)
+        decimal = int(b,2)
+        return decimal
+
+def binary(n: int) -> int:
+    lst = []
+    while n > 0:
+        rem = n%2
+        lst.append(rem)
+        n = n//2
+    for i in range(len(lst)):
+        if lst[i] == 0:
+            lst[i] = 1
+    num = "".join(map(str,lst[::-1]))
+    return num
